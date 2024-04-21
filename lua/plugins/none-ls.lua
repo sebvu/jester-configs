@@ -15,6 +15,7 @@ local config = function()
 			null_ls.builtins.formatting.isort,
 			-- null_ls.builtins.diagnostics.cpplint, (DEPRECATED)
 			-- require("none-ls.diagnostics.cpplint"), -- replacement
+			null_ls.builtins.diagnostics.trivy,
 		},
 	})
 
