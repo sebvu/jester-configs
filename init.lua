@@ -73,42 +73,12 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local plugins = {
-
-    { -- catppuccin colorscheme
-        "catppuccin/nvim", 
-        lazy = false,
-        name = "catppuccin", 
-        priority = 1000 
-    },
-
-    { -- telescope
-        'nvim-telescope/telescope.nvim', tag = '0.1.6',
-        dependencies = { 'nvim-lua/plenary.nvim' }
-    },
-
-    { -- treesitter
-        "nvim-treesitter/nvim-treesitter", 
-        build = ":TSUpdate" 
-    },
-
-    {
-        "nvim-neo-tree/neo-tree.nvim",
-        branch = "v3.x",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-            "MunifTanjim/nui.nvim",
-            -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-        }
-    },
-}
-
 local opts = {}
 local options = { noremap = true, silent = true } 
 
 -- load lazy
-require("lazy").setup(plugins, opts)
+-- migrated plugins to "plugins.lua"
+require("lazy").setup("plugins")
 
 -- Pane Navigation
 vim.keymap.set("n", "<C-h>", "<C-w>h", options) -- Navigate Left
