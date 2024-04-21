@@ -1,5 +1,5 @@
 local config = function()
-    local theme = require("lualine.themes.catppuccin")
+    local theme = require("lualine.themes.dracula")
     theme.normal.c.bg = nil -- required when implementing transparent background
 
     local config = require("lualine")
