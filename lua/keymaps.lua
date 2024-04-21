@@ -28,3 +28,10 @@ vim.keymap.set("n", "<leader>m", ":Neotree focus<CR>", {}) -- focus on tree
 
 -- none-ls.lua keymaps (located at file)
 -- <leader>gf - auto format
+
+-- completions.lua keymaps (located in file)
+-- <C-b> - scroll docs -4
+-- <C-f> - scroll docs 4
+-- <C-Space> - complete
+-- <C-e> - abort
+-- <CR> - confirm
