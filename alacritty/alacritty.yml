@@ -1,0 +1,21 @@
+window:
+  opacity: 1  # for displaying through transparency settings
+  decorations: none  # personal opinion (CHECK!!)
+
+## Alacritty Config
+font:
+  normal:
+    family: JetBrains Mono Nerd Font
+    style: Medium
+
+  bold:
+    family: JetBrains Mono Nerd Font
+    style: Bold
+
+  italic:
+    family: JetBrains Mono Nerd Font
+    style: MediumItalic
+
+  bold_italic:
+    family: JetBrains Mono Nerd Font
+    style: BoldItalic
