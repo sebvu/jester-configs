@@ -3,14 +3,20 @@
 local opts = { noremap = true, silent = true }
 
 -- Pane Navigation
-vim.keymap.set("n", "<C-h>", "<C-w>h", opts) -- Navigate Left
-vim.keymap.set("n", "<C-j>", "<C-w>j", opts) -- Navigate Down
-vim.keymap.set("n", "<C-k>", "<C-w>k", opts) -- Navigate Up
-vim.keymap.set("n", "<C-l>", "<C-w>l", opts) -- Navigate Right
+vim.keymap.set("n", "<C-h>", ":wincmd h<CR>", opts) -- Navigate Left
+vim.keymap.set("n", "<C-j>", ":wincmd j<CR>", opts) -- Navigate Down
+vim.keymap.set("n", "<C-k>", ":wincmd k<CR>", opts) -- Navigate Up
+vim.keymap.set("n", "<C-l>", ":wincmd l<CR>", opts) -- Navigate Right
 
 -- Window Management
 vim.keymap.set("n", "<leader>sv", ":vsplit<CR>", opts) -- Split Vertically
 vim.keymap.set("n", "<leader>sh", ":split<CR>", opts) -- Split Vertically
+
+-- easier indentation
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
+
+-- PLUGIN KEYMAPS
 
 -- lsp-config.lua keymaps
 vim.keymap.set("n", "K", vim.lsp.buf.hover, opts) -- display hover tooltip
@@ -24,6 +30,23 @@ vim.keymap.set("n", "<leader>m", ":Neotree focus<CR>", opts) -- focus on tree
 
 -- gitintegration.lua keymaps
 vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk_inline<CR>", opts) -- preview hunk inline
+
+-- comments.lua keymaps
+vim.api.nvim_set_keymap("n", "<C-_>", "gcc", { noremap = false })
+vim.api.nvim_set_keymap("v", "<C-_>", "gcc", { noremap = false })
+
+-- nvim-tmux-navigator.lua keymaps
+vim.keymap.set("n", "<C-h>", ":TmuxNavigateLeft<CR>", opts)
+vim.keymap.set("n", "<C-j>", ":TmuxNavigateDown<CR>", opts)
+vim.keymap.set("n", "<C-k>", ":TmuxNavigateUp<CR>", opts)
+vim.keymap.set("n", "<C-l>", ":TmuxNavigateRight<CR>", opts)
+
+-- vim-test.lua keymaps
+vim.keymap.set("n", "<leader>t", ":TestNearest<CR>", opts)
+vim.keymap.set("n", "<leader>T", ":TestFile<CR>", opts)
+vim.keymap.set("n", "<leader>a", ":TestSuite<CR>", opts)
+vim.keymap.set("n", "<leader>l", ":TestLast<CR>", opts)
+vim.keymap.set("n", "<leader>g", ":TestVisit<CR>", opts)
 
 -- telescope.lua keymaps (located in file)
 -- <leader>ff - find files

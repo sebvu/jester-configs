@@ -1,6 +1,6 @@
 local config = function()
 	local null_ls = require("null-ls")
-    local opts = { noremap = true, silent = true }
+	local opts = { noremap = true, silent = true }
 
 	null_ls.setup({
 		sources = {
@@ -14,7 +14,7 @@ local config = function()
 			null_ls.builtins.formatting.black,
 			null_ls.builtins.formatting.isort,
 			-- null_ls.builtins.diagnostics.cpplint, (DEPRECATED)
-			require("none-ls.diagnostics.cpplint"), -- replacement
+			-- require("none-ls.diagnostics.cpplint"), -- replacement
 		},
 	})
 

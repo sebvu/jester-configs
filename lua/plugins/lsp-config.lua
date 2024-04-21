@@ -14,25 +14,25 @@ end
 
 -- nvim-spconfig config
 local nvimlspconfig = function()
-    local capabilities = require('cmp_nvim_lsp').default_capabilities()
+	local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 	local lspconfig = require("lspconfig")
 	-- lspconfig setup lsps
 	lspconfig.lua_ls.setup({
-        capabilities = capabilities
-    })
+		capabilities = capabilities,
+	})
 	lspconfig.tsserver.setup({
-        capabilities = capabilities
-    })
+		capabilities = capabilities,
+	})
 	lspconfig.bashls.setup({
-        capabilities = capabilities
-    })
+		capabilities = capabilities,
+	})
 	lspconfig.clangd.setup({
-        capabilities = capabilities
-    })
+		capabilities = capabilities,
+	})
 	lspconfig.marksman.setup({
-        capabilities = capabilities
-    })
+		capabilities = capabilities,
+	})
 end
 
 return {

@@ -1,14 +1,14 @@
 local config = function()
-    require("gitsigns").setup()
+	require("gitsigns").setup()
 end
 
 return {
-    {
-        "tpope/vim-fugitive",
-    },
+	{
+		"tpope/vim-fugitive",
+	},
 
-    {
-        "lewis6991/gitsigns.nvim",
-        config = config,
-    },
+	{
+		"lewis6991/gitsigns.nvim",
+		config = config,
+	},
 }

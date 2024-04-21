@@ -2,8 +2,8 @@ local config = function()
 	local theme = require("lualine.themes.dracula")
 	theme.normal.c.bg = nil -- required when implementing transparent background
 
-	local config = require("lualine")
-	config.setup({
+	local require = require("lualine")
+	require.setup({
 		options = {
 			theme = theme,
 			globalstatus = true,

@@ -1,9 +1,9 @@
 local config = function()
 	local dap = require("dap")
 	local dapui = require("dapui")
-    local opts = { noremap = true, silent = true }
+	local opts = { noremap = true, silent = true }
 
-    require("dapui").setup()
+	require("dapui").setup()
 
 	dap.listeners.before.attach.dapui_config = function()
 		dapui.open()
@@ -18,7 +18,7 @@ local config = function()
 		dapui.close()
 	end
 
-    -- all debuggers below!
+	-- all debuggers below!
 
 	-- cpp adapter
 	dap.adapters.gdb = {
@@ -26,7 +26,7 @@ local config = function()
 		command = "gdb",
 		args = { "-i", "dap" },
 	}
-    -- cpp configurations
+	-- cpp configurations
 	dap.configurations.cpp = {
 		{
 			name = "Launch",
