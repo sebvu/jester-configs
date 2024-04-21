@@ -1,4 +1,3 @@
-
 return {
 	-- plugin to manage the file system and other tree like structures
 	"nvim-neo-tree/neo-tree.nvim",

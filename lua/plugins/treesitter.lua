@@ -2,7 +2,7 @@ local config = function()
 	local require = require("nvim-treesitter.configs")
 	require.setup({
 		-- ensure_installed = { "lua", "javascript", "bash", "cpp", "markdown", "markdown_inline" },
-        auto_install = true, -- automatically install a parser
+		auto_install = true, -- automatically install a parser
 		highlight = { enable = true },
 		indent = { enable = true },
 	})
