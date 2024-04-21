@@ -21,8 +21,9 @@ local config = function()
 end
 
 return {
-	-- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua.
-	"nvimtools/none-ls.nvim",
+    -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua.
+	-- CLI tools!!
+    "nvimtools/none-ls.nvim",
     dependencies = {
         "nvimtools/none-ls-extras.nvim", -- for deprecated
     },
