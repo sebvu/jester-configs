@@ -18,7 +18,7 @@ local config = function()
 		},
 	})
 
-	vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+	vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, opts)
 end
 
 return {
