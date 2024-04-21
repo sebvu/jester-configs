@@ -6,10 +6,10 @@ local config = function()
         snippet = {
             -- REQUIRED - you must specify a snippet engine
             expand = function(args)
-                require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
+                require("luasnip").lsp_expand(args.body) -- For 'luasnip' users
             end,
         },
-        window = { -- window displays
+        window = { -- windows displays
             completion = cmp.config.window.bordered(),
             documentation = cmp.config.window.bordered(),
         },
@@ -18,11 +18,11 @@ local config = function()
             ["<C-f>"] = cmp.mapping.scroll_docs(4),
             ["<C-Space>"] = cmp.mapping.complete(),
             ["<C-e>"] = cmp.mapping.abort(),
-            ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+            ["<CR>"] = cmp.mapping.confirm({ select = true }),
         }),
         sources = cmp.config.sources({
             -- { name = "nvim_lsp" },
-            { name = "luasnip" },
+            { name = "luasnip" }, -- For luasnip users.
         }, {
             { name = "buffer" },
         }),
@@ -31,12 +31,20 @@ end
 
 return {
     {
+        -- reaches out to any lsps attached to current buffer, and ask for completion recommendations
+        'hrsh7th/cmp-nvim-lsp'
+    },
+
+    {
         "L3MON4D3/LuaSnip",
         dependencies = {
-            "saadparwaiz1/cmp_luasnip", -- completion engine for luasnip
+            "saadparwaiz1/cmp_luasnip",
             "rafamadriz/friendly-snippets",
         },
     },
-    "hrsh7th/nvim-cmp",
-    config = config,
+
+    {
+        "hrsh7th/nvim-cmp",
+        config = config,
+    },
 }
