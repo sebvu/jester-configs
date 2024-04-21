@@ -22,11 +22,8 @@ opt.hlsearch = false -- highlighting searches
 
 opt.relativenumber = true -- relative line numbers
 opt.number = true -- allows normal numbers
-<<<<<<< HEAD
 opt.termguicolors = true -- allow full color support in terminal (SET TO FALSE FOR UGLY COLORS)
-=======
 opt.termguicolors = false -- allow full color support in terminal (SET TO FALSE FOR UGLY COLORS)
->>>>>>> b917060 (Add personal options)
 opt.colorcolumn = '100' -- set a column where we're going to insert a line
 opt.signcolumn = "yes" -- if a debugger is runner, keep gutter & necessary space available for insertion of debug icons
 opt.cmdheight = 1 -- cmd area 1 high
@@ -105,17 +102,13 @@ local plugins = {
             -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
         }
     },
-
 }
+
 local opts = {}
 local options = { noremap = true, silent = true } 
 
 -- load lazy
-<<<<<<< HEAD
-require("lazy").setup("plugins")
-=======
 require("lazy").setup(plugins, opts)
->>>>>>> b917060 (Add personal options)
 
 -- Pane Navigation
 vim.keymap.set("n", "<C-h>", "<C-w>h", options) -- Navigate Left
