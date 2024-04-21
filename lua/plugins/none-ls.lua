@@ -1,5 +1,6 @@
 local config = function()
 	local null_ls = require("null-ls")
+    local opts = { noremap = true, silent = true }
 
 	null_ls.setup({
 		sources = {
