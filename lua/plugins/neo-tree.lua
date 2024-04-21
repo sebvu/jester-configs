@@ -1,10 +1,11 @@
 local config = function()
-    vim.keymap.set('n', "<leader>e", ":Neotree<CR>", options)
-    vim.keymap.set('n', "<leader>q", ":Neotree close<CR>", options)
-    vim.keymap.set('n', "<leader>m", ":Neotree focus<CR>", options)
+    vim.keymap.set('n', "<leader>e", ":Neotree<CR>", {})
+    vim.keymap.set('n', "<leader>q", ":Neotree close<CR>", {})
+    vim.keymap.set('n', "<leader>m", ":Neotree focus<CR>", {})
 end
 
 return {
+    -- plugin to manage the file system and other tree like structures
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
     dependencies = {

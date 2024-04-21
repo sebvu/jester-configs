@@ -16,10 +16,11 @@ local config = function()
             lualine_y = { "progress" },
             lualine_z = { "location" },
         },
-    }) 
+    })
 end
 
 return {
+    -- statusline plugin
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = config,
