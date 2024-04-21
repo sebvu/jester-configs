@@ -77,7 +77,7 @@ local opts = {}
 local options = { noremap = true, silent = true } 
 
 -- load lazy
--- migrated plugins to "plugins.lua"
+-- migrated plugins to plugins/
 require("lazy").setup("plugins")
 
 -- Pane Navigation
@@ -89,28 +89,3 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", options) -- Navigate Right
 -- Window Management
 vim.keymap.set("n", "<leader>sv", ":vsplit<CR>", options) -- Split Vertically
 vim.keymap.set("n", "<leader>sh", ":split<CR>", options) -- Split Vertically
-
--- catppuccin
-require("catppuccin").setup()
-vim.cmd.colorscheme "catppuccin"
-
--- telescope
-local builtin = require("telescope.builtin")
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-
- -- configurations for treesitter
-local config = require("nvim-treesitter.configs")
-config.setup({
-    ensure_installed = {"lua", "javascript", "cpp"},
-    highlight = { enable = true },
-    indent = { enable = true },
-})
-
--- neotree
-vim.keymap.set('n', "<leader>e", ":Neotree<CR>", options)
-vim.keymap.set('n', "<leader>q", ":Neotree close<CR>", options)
-vim.keymap.set('n', "<leader>m", ":Neotree focus<CR>", options)
-
