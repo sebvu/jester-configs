@@ -24,7 +24,7 @@ opt.relativenumber = true -- relative line numbers
 opt.number = true -- allows normal numbers
 opt.termguicolors = true -- allow full color support in terminal (SET TO FALSE FOR UGLY COLORS)
 opt.termguicolors = false -- allow full color support in terminal (SET TO FALSE FOR UGLY COLORS)
-opt.colorcolumn = '100' -- set a column where we're going to insert a line
+opt.colorcolumn = "100" -- set a column where we're going to insert a line
 opt.signcolumn = "yes" -- if a debugger is runner, keep gutter & necessary space available for insertion of debug icons
 opt.cmdheight = 1 -- cmd area 1 high
 opt.scrolloff = 5 -- if we scroll within x lines of bottom/top, start scrolling
@@ -49,7 +49,8 @@ opt.autochdir = false -- automatically change directory we're in
 opt.mouse = ""
 opt.clipboard:append("unnamedplus") -- add register + to clipbord, allows us to copy and paste outside and inside vim
 opt.modifiable = true -- edit buffer you're in by default
-opt.guicursor = "n-v-c:block,i-ci-ve:block,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
+opt.guicursor =
+	"n-v-c:block,i-ci-ve:block,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
 -- changes appearence of cursor (CHECK ON THIS JESTER CAUSE WE ARE GOING MOUSELESS)
 opt.encoding = "UTF-8" -- encoding for current buffer you're in is going to be set to UTF-8
 
