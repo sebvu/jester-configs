@@ -1,9 +1,9 @@
 local telescopeconfig = function()
 	local require = require("telescope.builtin")
-	vim.keymap.set("n", "<leader>ff", require.find_files, {})
-	vim.keymap.set("n", "<leader>fg", require.live_grep, {})
-	vim.keymap.set("n", "<leader>fb", require.buffers, {})
-	vim.keymap.set("n", "<leader>fh", require.help_tags, {})
+	vim.keymap.set("n", "<leader>ff", require.find_files, {}) -- find files
+	vim.keymap.set("n", "<leader>fg", require.live_grep, {}) -- grep
+	vim.keymap.set("n", "<leader>fb", require.buffers, {}) -- display buffers
+	vim.keymap.set("n", "<leader>fh", require.help_tags, {}) -- display help tags
 end
 
 local telescopeuiconfig = function()

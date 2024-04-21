@@ -21,10 +21,6 @@ local nvimlspconfig = function()
 	lspconfig.bashls.setup({})
 	lspconfig.clangd.setup({})
 	lspconfig.marksman.setup({})
-
-	vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-	vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-	vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, {})
 end
 
 return {
