@@ -8,7 +8,7 @@ local masonlspconfig = function()
     local require = require("mason-lspconfig")
     require.setup({
         -- ensure certain lsps are installed on our system
-        ensure_installed = { "lua_ls", "tsserver", "bashls", "clangd", "markdown_oxide" }
+        ensure_installed = { "lua_ls", "tsserver", "bashls", "clangd", "marksman" }
     })
 end
 
@@ -20,7 +20,7 @@ local nvimlspconfig = function()
         lspconfig.tsserver.setup({})
         lspconfig.bashls.setup({})
         lspconfig.clangd.setup({})
-        lspconfig.markdown_oxide.setup({})
+        lspconfig.marksman.setup({})
 
         vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
         vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
