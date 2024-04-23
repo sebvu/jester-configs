@@ -16,10 +16,10 @@ vim.keymap.set("v", ">", ">gv")
 
 -- PLUGIN KEYMAPS
 
--- lsp-config.lua keymaps
-vim.keymap.set("n", "K", vim.lsp.buf.hover, opts) -- display hover tooltip
-vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts) -- display definition (goto)
-vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, opts) -- display code action
+-- lsp-config.lua keymaps (overlayed by lspsaga, go to lsp-config.lua for more)
+-- vim.keymap.set("n", "K", vim.lsp.buf.hover, opts) -- display hover tooltip
+-- vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts) -- display definition (goto)
+-- vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, opts) -- display code action
 
 -- neo-tree.lua keymaps
 vim.keymap.set("n", "<leader>e", ":Neotree<CR>", opts) -- open tree
