@@ -3,9 +3,9 @@ local config = function()
 end
 
 return {
-	{
-		"tpope/vim-fugitive",
-	},
+	-- {
+	-- 	"tpope/vim-fugitive",
+	-- },
 
 	{
 		"lewis6991/gitsigns.nvim",
