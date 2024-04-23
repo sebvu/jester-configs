@@ -1,4 +1,4 @@
-config = function()
+local config = function()
         local alpha = require("alpha")
         local dashboard = require("alpha.themes.startify")
 

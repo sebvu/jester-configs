@@ -47,7 +47,7 @@ return {
 	{
 		-- auto close brackets
 		"m4xshen/autoclose.nvim",
-		config = autoclosebraceconfig,
+		config = autoclosebracketconfig,
 	},
 
 	{

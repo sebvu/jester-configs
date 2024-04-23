@@ -1,7 +1,6 @@
 -- All keymaps
 
 local opts = { noremap = true, silent = true }
-
 -- -- Pane Navigation
 -- vim.keymap.set("n", "<C-h>", ":wincmd h<CR>", opts) -- Navigate Left
 -- vim.keymap.set("n", "<C-j>", ":wincmd j<CR>", opts) -- Navigate Down
