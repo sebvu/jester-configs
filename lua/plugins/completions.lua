@@ -29,15 +29,26 @@ local config = function()
 	})
 end
 
+local autoclosebracketconfig = function()
+	require("autoclose").setup()
+end
+
 return {
 	{
 		-- reaches out to any lsps attached to current buffer, and ask for completion recommendations
 		"hrsh7th/cmp-nvim-lsp",
 	},
 
-    {
-       'github/copilot.vim',
-    },
+	{
+		-- github copilot (optional)
+		"github/copilot.vim",
+	},
+
+	{
+		-- auto close brackets
+		"m4xshen/autoclose.nvim",
+		config = autoclosebraceconfig,
+	},
 
 	{
 		"L3MON4D3/LuaSnip",

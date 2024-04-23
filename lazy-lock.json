@@ -2,6 +2,7 @@
   "Comment.nvim": { "branch": "master", "commit": "0236521ea582747b58869cb72f70ccfa967d2e89" },
   "LuaSnip": { "branch": "master", "commit": "72eea98b1900013e0cb214f29b898c8d91564930" },
   "alpha-nvim": { "branch": "main", "commit": "41283fb402713fc8b327e60907f74e46166f4cfd" },
+  "autoclose.nvim": { "branch": "main", "commit": "dc42806540dcf448ecb2bad6b67204410cfbe629" },
   "catppuccin": { "branch": "main", "commit": "a1439ad7c584efb3d0ce14ccb835967f030450fe" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "5af77f54de1b16c34b23cba810150689a3a90312" },
   "cmp_luasnip": { "branch": "master", "commit": "05a9ab28b53f71d1aece421ef32fee2cb857a843" },
@@ -34,5 +35,6 @@
   "vim-fugitive": { "branch": "master", "commit": "dac8e5c2d85926df92672bf2afb4fc48656d96c7" },
   "vim-highlightedyank": { "branch": "master", "commit": "afb0f262b490706c23e94012c2ab9fa67c0481ce" },
   "vim-illuminate": { "branch": "master", "commit": "e522e0dd742a83506db0a72e1ced68c9c130f185" },
+  "vim-test": { "branch": "master", "commit": "eb5bd18d58a859e7d55d732d37e4e2b94fa50275" },
   "vim-tmux-navigator": { "branch": "master", "commit": "a26954a585b02a2ac02f87145e204f8798a7cbc2" }
 }
