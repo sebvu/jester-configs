@@ -1,37 +1,59 @@
 local telescopeconfig = function()
-	local require = require("telescope.builtin")
-	local opts = { noremap = true, silent = true }
-	vim.keymap.set("n", "<leader>ff", require.find_files, opts) -- find files
-	vim.keymap.set("n", "<leader>fg", require.live_grep, opts) -- grep
-	vim.keymap.set("n", "<leader>fb", require.buffers, opts) -- display buffers
-	vim.keymap.set("n", "<leader>fh", require.help_tags, opts) -- display help tags
+    require("telescope").setup({
+        defaults = {
+            file_ignore_patterns = { "node_modules", ".git", "lazy%-lock.json", "pack" },
+        },
+
+        pickers = {
+            find_files = {
+                theme = "dropdown",
+                previewer = true,
+                hidden = true,
+            },
+            live_grep = {
+                theme = "dropdown",
+                previewer = true,
+            },
+            buffers = {
+                theme = "dropdown",
+                previewer = true,
+            },
+        },
+    })
 end
 
 local telescopeuiconfig = function()
-	require("telescope").setup({
-		extensions = {
-			["ui-select"] = {
-				require("telescope.themes").get_dropdown({}),
-			},
-		},
-	})
-	-- To get ui-select loaded and working with telescope, you need to call
-	-- load_extension, somewhere after setup function:
-	require("telescope").load_extension("ui-select")
+    require("telescope").setup({
+        extensions = {
+            ["ui-select"] = {
+                require("telescope.themes").get_dropdown({}),
+            },
+        },
+    })
+    -- To get ui-select loaded and working with telescope, you need to call
+    -- load_extension, somewhere after setup function:
+    require("telescope").load_extension("ui-select")
 end
 
 return {
-	{
-		-- Find, Filter, Preview, Pick. All lua, all the time.
-		"nvim-telescope/telescope.nvim",
-		tag = "0.1.6",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		config = telescopeconfig,
-	},
+    {
+        -- Find, Filter, Preview, Pick. All lua, all the time.
+        "nvim-telescope/telescope.nvim",
+        tag = "0.1.6",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        config = telescopeconfig,
+        keys = {
+            vim.keymap.set("n", "<leader>fk", ":Telescope keymaps<CR>", {}),
+            vim.keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>", {}),
+            vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", {}),
+            vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>", {}),
+            vim.keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", {}),
+        },
+    },
 
-	{
-		-- makes lists show up as a cool ui
-		"nvim-telescope/telescope-ui-select.nvim",
-		config = telescopeuiconfig,
-	},
+    {
+        -- makes lists show up as a cool ui
+        "nvim-telescope/telescope-ui-select.nvim",
+        config = telescopeuiconfig,
+    },
 }

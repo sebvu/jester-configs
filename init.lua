@@ -20,3 +20,4 @@ require("keymaps")
 -- load lazy
 -- migrated plugins to plugins/
 require("lazy").setup("plugins")
+
