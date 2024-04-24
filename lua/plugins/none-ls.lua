@@ -13,6 +13,7 @@ local config = function()
 			null_ls.builtins.formatting.prettier,
 			null_ls.builtins.formatting.black,
 			null_ls.builtins.formatting.isort,
+            -- null_ls.builtints.diagnostic.ast_grep,
 			-- null_ls.builtins.diagnostics.cpplint, (DEPRECATED)
 			require("none-ls.diagnostics.cpplint"), -- replacement
 			-- null_ls.builtins.diagnostics.trivy,

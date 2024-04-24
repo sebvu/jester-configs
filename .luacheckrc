@@ -1,4 +1,5 @@
 ---@diagnostic disable: lowercase-global
+---@diagnostic disable: missing-fields -- ignore annoying error
 
 ignore = {
     "111", -- setting non-standard global variable

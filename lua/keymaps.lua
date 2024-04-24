@@ -5,7 +5,6 @@ local opts = { noremap = true, silent = true }
 -- vim.keymap.set("n", "<C-h>", ":wincmd h<CR>", opts) -- Navigate Left
 -- vim.keymap.set("n", "<C-j>", ":wincmd j<CR>", opts) -- Navigate Down
 
-
 -- Window Management
 vim.keymap.set("n", "<leader>sv", ":vsplit<CR>", opts) -- Split Vertically
 vim.keymap.set("n", "<leader>sh", ":split<CR>", opts) -- Split Vertically
@@ -13,6 +12,12 @@ vim.keymap.set("n", "<leader>sh", ":split<CR>", opts) -- Split Vertically
 -- easier indentation
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
+
+-- general remaps
+vim.keymap.set("n", "<C-d>", "<C-d>zz") -- move down half a page and center
+vim.keymap.set("n", "<C-u>", "<C-u>zz") -- move up half a page and center
+vim.keymap.set("n", "n", "nzz") -- move to next search result and center
+vim.keymap.set("n", "N", "Nzz") -- move to previous search result and center
 
 -- PLUGIN KEYMAPS
 
