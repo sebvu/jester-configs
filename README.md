@@ -22,3 +22,5 @@ this github page will show off my neovim config, and i will update it as i learn
 - 43 plugins
 
 ![Version 1](assets/version1nvim.png)
+
+- 4/44/24: added hardtime to get rid of bad habits
