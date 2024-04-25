@@ -9,6 +9,7 @@
   "copilot.vim": { "branch": "release", "commit": "1e135c5303bc60598f6314a2276f31dc91aa34dd" },
   "friendly-snippets": { "branch": "main", "commit": "ea068f1becd91bcd4591fceb6420d4335e2e14d3" },
   "gitsigns.nvim": { "branch": "main", "commit": "035da036e68e509ed158414416c827d022d914bd" },
+  "icon-picker.nvim": { "branch": "master", "commit": "3ee9a0ea9feeef08ae35e40c8be6a2fa2c20f2d3" },
   "indent-blankline.nvim": { "branch": "master", "commit": "3d08501caef2329aba5121b753e903904088f7e6" },
   "lazy.nvim": { "branch": "main", "commit": "3f13f080434ac942b150679223d54f5ca91e0d52" },
   "lspsaga.nvim": { "branch": "main", "commit": "f20985499cd8ff0fbbfe8e7c770428ef764fc3be" },

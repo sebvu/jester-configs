@@ -64,10 +64,10 @@ local config = function()
 	dashboard.section.footer.val = footer()
 
 	dashboard.section.buttons.val = {
-		dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
-		dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
-        dashboard.button("r", "Check README.md", ":edit ~/.config/nvim/README.md<CR>"),
-		dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
+		dashboard.button("f", "  Find Files", ":Telescope find_files <CR>"),
+		dashboard.button("t", "  Find Text", ":Telescope live_grep <CR>"),
+        dashboard.button("r", "💜 Check README.md", ":edit ~/.config/nvim/README.md<CR>"),
+		dashboard.button("q", "💔 Quit The BEST Text Editor Ever", ":qa<CR>"),
 	}
 
 	dashboard.section.footer.opts.hl = "Type"

@@ -16,10 +16,11 @@ vim.keymap.set("v", ">", ">gv")
 -- general remaps
 vim.keymap.set("n", "<C-d>", "<C-d>zz") -- move down half a page and center
 vim.keymap.set("n", "<C-u>", "<C-u>zz") -- move up half a page and center
-vim.keymap.set("n", "n", "nzz") -- move to next search result and center
-vim.keymap.set("n", "N", "Nzz") -- move to previous search result and center
 
 -- PLUGIN KEYMAPS
+
+-- noice.lua keymaps
+vim.keymap.set("n", "<leader>nd", ":NoiceDismiss<CR>", {desc = "Dismiss Noice Message"}) -- dismiss current noice notification
 
 -- lsp-config.lua keymaps (overlayed by lspsaga, go to lsp-config.lua for more)
 -- vim.keymap.set("n", "K", vim.lsp.buf.hover, opts) -- display hover tooltip
@@ -35,8 +36,8 @@ vim.keymap.set("n", "<leader>q", ":Neotree close<CR>", opts) -- close tree
 vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk_inline<CR>", opts) -- preview hunk inline
 
 -- comments.lua keymap
-vim.api.nvim_set_keymap("n", "<C-_>", "gcc", { noremap = false, })
-vim.api.nvim_set_keymap("v", "<C-_>", "gc", { noremap = false, })
+vim.api.nvim_set_keymap("n", "<C-_>", "gcc", { noremap = false })
+vim.api.nvim_set_keymap("v", "<C-_>", "gc", { noremap = false })
 
 -- nvim-tmux-navigator.lua keymaps
 vim.keymap.set("n", "<C-h>", ":TmuxNavigateLeft<CR>", opts)
@@ -70,3 +71,8 @@ vim.keymap.set("n", "<C-l>", ":TmuxNavigateRight<CR>", opts)
 -- debugging.lua keymaps (located in file)
 -- <Leader>dt - toggle breakpoint
 -- <Leader>dc - continue
+
+-- emoji picker stuff
+-- vim.keymap.set("n", "<Leader><Leader>i", "<cmd>IconPickerNormal<cr>", opts)
+-- vim.keymap.set("n", "<Leader><Leader>y", "<cmd>IconPickerYank<cr>", opts) --> Yank the selected icon into register
+-- vim.keymap.set("i", "<C-i>", "<cmd>IconPickerInsert<cr>", opts)
