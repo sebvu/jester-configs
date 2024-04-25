@@ -52,9 +52,9 @@ local config = function()
     })
 end
 
-local autoclosebracketconfig = function()
-    require("autoclose").setup()
-end
+-- local autoclosebracketconfig = function()
+--     require("autoclose").setup()
+-- end
 
 return {
     {
@@ -81,11 +81,11 @@ return {
         "hrsh7th/cmp-cmdline",
     },
 
-    {
-        -- auto close brackets
-        "m4xshen/autoclose.nvim",
-        config = autoclosebracketconfig,
-    },
+    -- {
+    --     -- auto close brackets
+    --     "m4xshen/autoclose.nvim",
+    --     config = autoclosebracketconfig,
+    -- },
 
     {
         "L3MON4D3/LuaSnip",
