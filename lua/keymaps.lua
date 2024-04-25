@@ -45,6 +45,9 @@ vim.keymap.set("n", "<C-j>", ":TmuxNavigateDown<CR>", opts)
 vim.keymap.set("n", "<C-k>", ":TmuxNavigateUp<CR>", opts)
 vim.keymap.set("n", "<C-l>", ":TmuxNavigateRight<CR>", opts)
 
+-- img-clipboarder-paster.lua keymaps
+vim.keymap.set("n", "<C-p>", ":PasteImg<CR>", opts)
+
 -- vim-test.lua keymaps
 -- vim.keymap.set("n", "<leader>t", ":TestNearest<CR>", opts)
 -- vim.keymap.set("n", "<leader>T", ":TestFile<CR>", opts)

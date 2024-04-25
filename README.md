@@ -11,4 +11,4 @@ i'm new to neovim, so i'm still learning!!
 - debugging
 
 ## lsp-config
-- can u like configure clangd for me thanks
+ can u like configure clangd for me thanks
