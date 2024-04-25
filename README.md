@@ -1,5 +1,4 @@
-
-![Jester Configs Banner](/home/sebvu/Pictures/JesterConfigs.png)
+![Jester Configs Banner](assets/JesterConfigs.png)
 
 # jester-config
 
@@ -20,4 +19,6 @@ this github page will show off my neovim config, and i will update it as i learn
 
 # v1 04/24/24
 
-![Version 1](assets/~/Pictures/version1nvim.png)
+- 43 plugins
+
+![Version 1](assets/version1nvim.png)
