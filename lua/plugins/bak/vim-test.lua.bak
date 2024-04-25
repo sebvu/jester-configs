@@ -1,0 +1,9 @@
+return {
+    -- a vim wrapper for running tests on different granularities
+    "vim-test/vim-test",
+    dependencies = {
+        "preservim/vimux",
+    },
+    -- when running a test, opens new pane on bottom using tmux
+    vim.cmd("let test#strategy = 'vimux'"),
+}
