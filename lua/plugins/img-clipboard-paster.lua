@@ -1,4 +1,9 @@
 return {
-    "ekickx/clipboard-image.nvim"
-    -- keymap in keymaps, 
+  "HakonHarnes/img-clip.nvim",
+  event = "VeryLazy",
+  opts = {
+    -- add options here
+    -- or leave it empty to use the default settings
+  },
+    -- keys are in keymaps
 }
