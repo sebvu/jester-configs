@@ -20,12 +20,12 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz") -- move up half a page and center
 -- PLUGIN KEYMAPS
 
 -- noice.lua keymaps
-vim.keymap.set("n", "<leader>nd", ":NoiceDismiss<CR>", {desc = "Dismiss Noice Message"}) -- dismiss current noice notification
+vim.keymap.set("n", "<leader>nd", ":NoiceDismiss<CR>", { desc = "Dismiss Noice Message" }) -- dismiss current noice notification
 
--- lsp-config.lua keymaps (overlayed by lspsaga, go to lsp-config.lua for more)
--- vim.keymap.set("n", "K", vim.lsp.buf.hover, opts) -- display hover tooltip
--- vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts) -- display definition (goto)
--- vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, opts) -- display code action
+-- lspsaga.lua for lspconfigs keymaps
+vim.keymap.set("n", "<leader>gd", ":Lspsaga goto_definition<CR>", opts)  -- go to finition
+vim.keymap.set("n", "<leader>ca", ":Lspsaga code_action<CR>", opts)      -- see available code actions
+vim.keymap.set("n", "K", ":Lspsaga hover_doc<CR>", opts)                 -- show documentation for what is under cursor
 
 -- neo-tree.lua keymaps
 vim.keymap.set("n", "<leader>e", ":Neotree<CR>", opts) -- open tree

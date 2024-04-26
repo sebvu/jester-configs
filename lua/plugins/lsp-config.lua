@@ -1,102 +1,53 @@
--- mason.nvim config
-local masonconfig = function()
-	require("mason").setup()
-end
-
--- mason-lspconfig config
-local masonlspconfig = function()
-	local require = require("mason-lspconfig")
-	require.setup({
-		-- ensure certain lsps are installed on our system
-		ensure_installed = { "lua_ls", "tsserver", "bashls", "clangd", "marksman" },
-	})
-end
-
--- nvim-spconfig config
-local nvimlspconfig = function()
-	require("neoconf").setup()
-	local capabilities = require("cmp_nvim_lsp").default_capabilities()
-	local lspconfig = require("lspconfig")
-	local signs = { Error = " ", Warn = " ", Hint = "ﴞ ", Info = "" }
-
-	-- set signs for lsp diagnostics
-	for type, icon in pairs(signs) do
-		local hl = "LspDiagnosticsSign" .. type
-		vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-	end
-
-	local on_attach = function(bufnr)
-		local opts = { noremap = true, silent = true, buffer = bufnr }
-
-		-- set keybinds
-		vim.keymap.set("n", "gf", ":Lspsaga lsp_finder<CR>", opts) -- show definition, references
-		vim.keymap.set("n", "gD", ":lua vim.lsp.buf.declerations()<CR>", opts) -- go to decleration
-		vim.keymap.set("n", "gd", ":Lspsaga peek_definition<CR>", opts) -- see definition and make edits in window
-		vim.keymap.set("n", "gi", ":lua vim.lsp.buf.implementation()<CR>", opts) -- go to mplementation
-		vim.keymap.set("n", "<leader>gD", ":Lspsaga goto_definition<CR>", opts) -- go to finition
-		vim.keymap.set("n", "<leader>ca", ":Lspsaga code_action<CR>", opts) -- see available code actions
-		vim.keymap.set("n", "<leader>rn", ":Lspsaga rename<CR>", opts) -- smart rename
-		vim.keymap.set("n", "<leader>D", ":Lspsaga show_line_diagnostics<CR>", opts) -- show diagnostics for line
-		vim.keymap.set("n", "<leader>d", ":Lspsaga show_cursor_diagnostics<CR>", opts) -- show diagnostics for cursorj
-		vim.keymap.set("n", "<leader>pd", ":Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to prev diagnostic in buffer
-		vim.keymap.set("n", "<leader>nd", ":Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
-		vim.keymap.set("n", "K", ":Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
-		vim.keymap.set("n", "<leader>lo", ":LSoutlineTogle<CR>", opts) -- see outline on right hand side
-	end
-	---@diagnostic disable: missing-fields -- ignore annoying error
-	-- setup lsps
-	lspconfig.lua_ls.setup({
-		capabilities = capabilities,
-		on_attach = on_attach,
-	})
-	lspconfig.tsserver.setup({
-		capabilities = capabilities,
-		on_attach = on_attach,
-	})
-	lspconfig.bashls.setup({
-		capabilities = capabilities,
-		on_attach = on_attach,
-	})
-	lspconfig.clangd.setup({
-		capabilities = capabilities,
-		on_attach = on_attach,
-		cmd = {
-			"clangd",
-			"--offset-encoding=utf-16",
-			"--fallback-style=webkit",
-			-- "--background-index",
-			-- "--clang-tidy",
-			-- "--header-insertion=iwyu",
-			-- "--completion-style=detailed",
-			-- "--function-arg-placeholders",
-			-- "-j4",
-			-- "--fallback-style=llvm",
-            -- "--ColumnLimit=80"
-		},
-	})
-	lspconfig.marksman.setup({
-		capabilities = capabilities,
-		on_attach = on_attach,
-	})
-end
-
 return {
-	{
-		-- portable package manager for neovim
+	{ -- portable package manager for installing LSPs, DAPs, linters and formatters.
 		"williamboman/mason.nvim",
-		config = masonconfig,
+		config = function()
+			require("mason").setup()
+		end,
 	},
-
-	{
-		-- bridges gap between mason and lspconfig
+	{ -- extension for mason.nvim that makes it easier to use lsp configs with mason.nvim
 		"williamboman/mason-lspconfig.nvim",
-		config = masonlspconfig,
+		-- for lsp languge servers, refer to the github: https://github.com/williamboman/mason-lspconfig.nvim
+		config = function()
+			require("mason-lspconfig").setup({
+				ensure_installed = { "lua_ls", "clangd", "bashls", "marksman", "tsserver", "pyright" },
+			})
+		end,
 	},
-
 	{
-		-- set keybinds and setup communication neovim does between itself and lsp
 		"neovim/nvim-lspconfig",
-		config = nvimlspconfig,
-		-- :LspInfo to check which lsps are communicating
+		config = function()
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+			local lspconfig = require("lspconfig")
+			-- lspconfig.languageserver.setup {}
+			-- :LspInfo to check lsps connected to current buffer
+			lspconfig.lua_ls.setup({ -- lua language server
+				capabilities = capabilities,
+			})
+			lspconfig.clangd.setup({ -- C/C++ language server
+				cmd = {
+					"clangd",
+					"--offset-encoding=utf-16",
+					"--background-index",
+					"--clang-tidy",
+					"--header-insertion=iwyu",
+					"--completion-style=detailed",
+					"--function-arg-placeholders",
+					"--fallback-style=llvm",
+				},
+			})
+			lspconfig.bashls.setup({ -- bash language server
+				capabilities = capabilities,
+			})
+			lspconfig.marksman.setup({ -- markdown language server
+				capabilities = capabilities,
+			})
+			lspconfig.tsserver.setup({ -- javascript language server
+				capabilities = capabilities,
+			})
+			lspconfig.pyright.setup({ -- python language server
+				capabilities = capabilities,
+			})
+		end,
 	},
 }
