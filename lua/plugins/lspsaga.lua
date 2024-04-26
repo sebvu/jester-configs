@@ -3,7 +3,7 @@ return {
     config = function()
         require("lspsaga").setup({
             ui = {
-                code_action = '💕'
+                code_action = '❗'
             }
         })
     end,
