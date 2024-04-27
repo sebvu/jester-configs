@@ -11,6 +11,7 @@ this github page will show off my neovim config, and i will update it as i learn
 - lsp-config (lsps using mason)
   ~~treesitter~~
 - none-ls (formatters and linters using mason)
+- DAP (read help dap.txt)
 
 ## issues
 
