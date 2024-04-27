@@ -33,3 +33,7 @@ this github page will show off my neovim config, and i will update it as i learn
 - kept hardtimelearner in .bak for temporary on and off usages
 - most likely going to organize all my lua files eventually, they're all kind of a mess and i'm debating how to organize my keymaps considering they're the biggest mess of it all
 - took around 6 hours to properly get everything working, i'd say **v1.2** is the first working version of my nvim configs LOL
+
+### v1.21 (4/27/24)
+
+- the absolutely gorgeous feeling of not figuring out why your error level was warn and then copy and pasting a few lines and now having it at trace and eerything working perfectly fine? i'm totally down for that. 
