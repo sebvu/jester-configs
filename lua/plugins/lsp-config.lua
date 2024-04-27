@@ -27,7 +27,7 @@ return {
                 vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
             end
 
-            -- lspconfig.languageserver.setup {}
+            -- lspconfig.languageserver.setup({})
             -- :LspInfo to check lsps connected to current buffer
             lspconfig.lua_ls.setup({ -- lua language server
                 capabilities = capabilities,

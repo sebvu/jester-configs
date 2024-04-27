@@ -23,7 +23,6 @@ opt.hlsearch = false -- highlighting searches
 opt.relativenumber = true -- relative line numbers
 opt.number = true -- allows normal numbers
 opt.termguicolors = true -- allow full color support in terminal (SET TO FALSE FOR UGLY COLORS)
-opt.termguicolors = false -- allow full color support in terminal (SET TO FALSE FOR UGLY COLORS)
 -- opt.colorcolumn = "100" -- set a column where we're going to insert a line
 opt.signcolumn = "yes" -- if a debugger is runner, keep gutter & necessary space available for insertion of debug icons
 opt.cmdheight = 1 -- cmd area 1 high
