@@ -27,13 +27,21 @@ return {
                 vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
             end
 
+            local on_attach = function()
+                vim.keymap.set("n", "<leader>gd", ":Lspsaga goto_definition<CR>", {}) -- go to finition
+                vim.keymap.set("n", "<leader>ca", ":Lspsaga code_action<CR>", {}) -- see available code actions
+                vim.keymap.set("n", "K", ":Lspsaga hover_doc<CR>", {})    -- show documentation for what is under cursor
+                vim.keymap.set("n", "<leader>rn", ":Lspsaga rename<CR>", {}) -- smart rename
+            end
             -- lspconfig.languageserver.setup({})
             -- :LspInfo to check lsps connected to current buffer
             lspconfig.lua_ls.setup({ -- lua language server
                 capabilities = capabilities,
+                on_attach = on_attach,
             })
             lspconfig.clangd.setup({ -- C/C++ language server
                 capabilities = capabilities,
+                on_attach = on_attach,
                 cmd = {
                     "clangd",
                     "--offset-encoding=utf-16",
@@ -47,15 +55,19 @@ return {
             })
             lspconfig.bashls.setup({ -- bash language server
                 capabilities = capabilities,
+                on_attach = on_attach,
             })
             lspconfig.marksman.setup({ -- markdown language server
                 capabilities = capabilities,
+                on_attach = on_attach,
             })
             lspconfig.tsserver.setup({ -- javascript language server
                 capabilities = capabilities,
+                on_attach = on_attach,
             })
             lspconfig.pyright.setup({ -- python language server
                 capabilities = capabilities,
+                on_attach = on_attach,
             })
         end,
     },

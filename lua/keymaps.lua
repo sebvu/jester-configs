@@ -7,7 +7,7 @@ local opts = { noremap = true, silent = true }
 
 -- Window Management
 vim.keymap.set("n", "<leader>sv", ":vsplit<CR>", opts) -- Split Vertically
-vim.keymap.set("n", "<leader>sh", ":split<CR>", opts)  -- Split Vertically
+vim.keymap.set("n", "<leader>sh", ":split<CR>", opts) -- Split Vertically
 
 -- easier indentation
 vim.keymap.set("v", "<", "<gv")
@@ -23,12 +23,13 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz") -- move up half a page and center
 vim.keymap.set("n", "<leader>nd", ":NoiceDismiss<CR>", { desc = "Dismiss Noice Message" }) -- dismiss current noice notification
 
 -- lspsaga.lua for lspconfigs keymaps
-vim.keymap.set("n", "<leader>gd", ":Lspsaga goto_definition<CR>", opts) -- go to finition
-vim.keymap.set("n", "<leader>ca", ":Lspsaga code_action<CR>", opts)     -- see available code actions
-vim.keymap.set("n", "K", ":Lspsaga hover_doc<CR>", opts)                -- show documentation for what is under cursor
+-- vim.keymap.set("n", "<leader>gd", ":Lspsaga goto_definition<CR>", opts) -- go to finition
+-- vim.keymap.set("n", "<leader>ca", ":Lspsaga code_action<CR>", opts) -- see available code actions
+-- vim.keymap.set("n", "K", ":Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
+-- vim.keymap.set("n", "<leader>rn", ":Lspsaga rename<CR>", opts) -- smart rename
 
 -- neo-tree.lua keymaps
-vim.keymap.set("n", "<leader>e", ":Neotree<CR>", opts)       -- open tree
+vim.keymap.set("n", "<leader>e", ":Neotree<CR>", opts) -- open tree
 vim.keymap.set("n", "<leader>q", ":Neotree close<CR>", opts) -- close tree
 -- vim.keymap.set("n", "<leader>m", ":Neotree focus<CR>", opts) -- focus on tree
 
