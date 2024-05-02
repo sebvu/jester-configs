@@ -10,7 +10,7 @@ return {
         -- for lsp languge servers, refer to the github: https://github.com/williamboman/mason-lspconfig.nvim
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "clangd", "bashls", "marksman", "tsserver", "pyright" },
+                ensure_installed = { "lua_ls", "clangd", "bashls", "marksman", "tsserver", "pyright", "yamlls" },
             })
         end,
     },
@@ -66,6 +66,10 @@ return {
                 on_attach = on_attach,
             })
             lspconfig.pyright.setup({ -- python language server
+                capabilities = capabilities,
+                on_attach = on_attach,
+            })
+            lspconfig.yamlls.setup({ -- gitlab ci language server
                 capabilities = capabilities,
                 on_attach = on_attach,
             })

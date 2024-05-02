@@ -20,6 +20,7 @@ return {
                 -- null_ls.builtins.diagnostics.cpplint, (DEPRECATED)
                 require("none-ls.diagnostics.cpplint"), -- replacement
                 -- null_ls.builtins.diagnostics.trivy,
+                null_ls.builtins.diagnostics.actionlint,
             },
         })
         -- anything that's able to respond to format attached to buffer will respond to this

@@ -38,3 +38,7 @@ this github page will show off my neovim config, and i will update it as i learn
 ### v1.21 (4/27/24)
 
 - the absolutely gorgeous feeling of not figuring out why your error level was warn and then copy and pasting a few lines and now having it at trace and eerything working perfectly fine? i'm totally down for that. 
+
+### v1.22 (5/02/24)
+
+- stable so far, just added git-conflict.
