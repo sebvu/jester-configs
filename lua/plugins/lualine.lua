@@ -1,5 +1,5 @@
 local config = function()
-    local theme = require("lualine.themes.dracula")
+    local theme = require("lualine.themes.nightfly")
     theme.normal.c.bg = nil -- required when implementing transparent background
 
     require("lualine").setup({
@@ -18,7 +18,7 @@ local config = function()
                 {
                     require("noice").api.statusline.mode.get,
                     cond = require("noice").api.statusline.mode.has,
-                    color = { fg = "#ff9e64" },
+                    color = { fg = "#967bb6" },
                 },
             },
             lualine_y = { "progress" },
