@@ -9,9 +9,11 @@ this github page will show off my neovim config, and i will update it as i learn
 ## files to edit upon new language
 
 - lsp-config (lsps using mason)
-  ~~treesitter~~
-- none-ls (formatters and linters using mason)
-- DAP (read help dap.txt)
+    <!-- ~~treesitter~~ -->
+  <!-- - none-ls (formatters and linters using mason) -->
+- conformformatter
+- linting
+<!-- - DAP (read help dap.txt) -->
 
 ## issues
 
@@ -23,6 +25,9 @@ this github page will show off my neovim config, and i will update it as i learn
 - 43 plugins
 
 ![Version 1](assets/version1nvim.png)
+
+<details>
+<summary>All version 1 changes</summary>
 
 ### v1.1 (4/24/24):
 
@@ -37,8 +42,13 @@ this github page will show off my neovim config, and i will update it as i learn
 
 ### v1.21 (4/27/24)
 
-- the absolutely gorgeous feeling of not figuring out why your error level was warn and then copy and pasting a few lines and now having it at trace and eerything working perfectly fine? i'm totally down for that. 
+- the absolutely gorgeous feeling of not figuring out why your error level was warn and then copy and pasting a few lines and now having it at trace and eerything working perfectly fine? i'm totally down for that.
 
 ### v1.22 (5/02/24)
 
 - stable so far, just added git-conflict.
+
+### v1.23 (5/03/24)
+
+- Replaced [none.ls](https://github.com/nvimtools/none-ls.nvim) with [conform](https://github.com/stevearc/conform.nvim) and [nvim-lint](https://github.com/mfussenegger/nvim-lint).
+</details>
