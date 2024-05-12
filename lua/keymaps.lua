@@ -8,6 +8,7 @@ local opts = { noremap = true, silent = true }
 -- Window Management
 vim.keymap.set("n", "<leader>sv", ":vsplit<CR>", opts) -- Split Vertically
 vim.keymap.set("n", "<leader>sh", ":split<CR>", opts) -- Split Vertically
+vim.keymap.set("n", "<leader>sq", ":close<CR>", opts) -- Split Vertically
 
 -- easier indentation
 vim.keymap.set("v", "<", "<gv")
@@ -19,7 +20,7 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz") -- move up half a page and center
 
 -- PLUGIN KEYMAPS
 
--- noice.lua keymaps
+-- noice.lua keymaps (currently not being used)
 vim.keymap.set("n", "<leader>nd", ":NoiceDismiss<CR>", { desc = "Dismiss Noice Message" }) -- dismiss current noice notification
 
 -- lspsaga.lua for lspconfigs keymaps
