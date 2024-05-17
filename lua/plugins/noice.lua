@@ -32,28 +32,28 @@ return {
 		-- OPTIONAL:
 		--   `nvim-notify` is only needed, if you want to use the notification view.
 		--   If not available, we use `mini` as the fallback
-		{
-			"rcarriga/nvim-notify",
-			config = function() -- added for transparency
-				require("notify").setup({
-					background_colour = "#000000",
-					render = "compact",
-					routes = {
-						{
-							view = "notify",
-							filter = { event = "msg_showmode" },
-						},
-					},
-				})
-				-- avoid callbacks
-				local async = require("plenary.async")
-				local notify = require("notify").async
-
-				async.run(function()
-					notify("Let's wait for this to close").events.close()
-					notify("It closed!")
-				end)
-			end,
-		},
+		-- 	{
+		-- 		"rcarriga/nvim-notify",
+		-- 		config = function() -- added for transparency
+		-- 			require("notify").setup({
+		-- 				background_colour = "#000000",
+		-- 				render = "compact",
+		-- 				routes = {
+		-- 					{
+		-- 						view = "notify",
+		-- 						filter = { event = "msg_showmode" },
+		-- 					},
+		-- 				},
+		-- 			})
+		-- 			-- avoid callbacks
+		-- 			local async = require("plenary.async")
+		-- 			local notify = require("notify").async
+		--
+		-- 			async.run(function()
+		-- 				notify("Let's wait for this to close").events.close()
+		-- 				notify("It closed!")
+		-- 			end)
+		-- 		end,
+		-- 	},
 	},
 }
